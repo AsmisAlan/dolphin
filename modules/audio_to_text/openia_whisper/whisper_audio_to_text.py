@@ -1,8 +1,11 @@
 from whisper import load_model
-import hashlib
 from datetime import timedelta
-import os
-from typing import TypedDict, Literal
+import tempfile
+from typing import TypedDict
+
+# print("numpy version:", numpy.__version__)
+# print("pandas version:", pandas.__version__)
+# print("requests version:", requests.__version__)
 
 # whisper is working wheel , todo: use https://github.com/MrEdwards007/WhisperTaskAcceleration/blob/main/WhisperTaskAcceleration.py
 
@@ -66,9 +69,20 @@ if __name__ == "__main__":
         "language": "es",
         "temperature": 0.5
     }
-    input = {
-        "audio": "C:\DEV\delfin\snap.mp4"
+
+    file_path = "C:\DEV\delfin\Snapinsta.app_video_10000000_3458621627742288_9212203214280848790_n.mp4"
+
+    with open(file_path, 'rb') as audio_file:
+        file_data = audio_file.read()
+
+    # Create a temporary file and write the audio data to it
+    with tempfile.NamedTemporaryFile(suffix=".mp4", delete=False) as temp_audio_file:
+        temp_audio_file.write(file_data)
+        temp_path = temp_audio_file.name
+
+    input_data = {
+        "audio": temp_path
     }
-    result = whisper_audio_to_subtitle(configuration, input)
+    result = whisper_audio_to_subtitle(configuration, input_data)
 
     print(result)
