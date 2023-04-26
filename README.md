@@ -16,3 +16,7 @@ Video generation from template
 - products video generation
   PDF summary
 - video subtitle
+- A news portal
+- email reading creation
+- Curriculum mapper to convert a CV into another type of data
+- kavak: extract information from web about cars
