@@ -1,0 +1,31 @@
+how to print screen in python
+ANSWER
+Printing the screen in Python is a task that can be accomplished in multiple ways. The simplest and most common way of printing in Python is by using the built-in print() function. The print() function takes one or more arguments, and prints them to the standard output, which is usually the console or terminal window. [1]
+
+To print in the middle of the screen, Python 3 offers the shutil.get_terminal_size() function, which returns a tuple with the current terminal size. Then, str.center() can be used to center text using spaces. [4]
+
+Here's an example of how to print "hello world" in the middle of the screen using Python 3:
+
+import shutil
+
+columns = shutil.get_terminal_size().columns
+print("hello world".center(columns))
+If you're using Python 2, you can still achieve the same result by using os.get_terminal_size() instead of shutil.get_terminal_size(). However, this function is only available in Python 3.0 or later, so it won't work in Python 2. [4]
+
+If you want to print to a file instead of the console, you can redirect the standard output to a file stream. This can be done by using the ">" operator followed by the name of the file you want to write to. For example, to write the output of a Python script to a file called "output.txt", you can use the following command:
+
+python script.py > output.txt
+This will redirect the standard output to the file "output.txt". If the file doesn't exist, it will be created. If it does exist, its contents will be overwritten. [1]
+
+If you want to append to an existing file instead of overwriting it, you can use ">>" instead of ">". For example, to append the output of a Python script to a file called "output.txt", you can use the following command:
+
+python script.py >> output.txt
+This will append the standard output to the end of the file "output.txt". If the file doesn't exist, it will be created. [1]
+
+If you want to prevent a newline character from being printed after each call to print(), you can pass an empty string as the value of the "end" parameter. For example, to print "hello" and "world" on the same line, separated by a space, you can use the following code:
+
+print("hello", end=" ")
+print("world")
+This will output "hello world" on a single line. The "end" parameter specifies the string to append to the end of the printed text, and by default it is set to "\n", which is a newline character. [1]
+
+In summary, to print to the console or terminal window in Python, use the built-in print() function. To print in the middle of the screen, use shutil.get_terminal_size() and str.center(). To print to a file, redirect the standard output to a file stream using ">" or ">>". To prevent a newline character from being printed, pass an empty string as the value of the "end" parameter.
