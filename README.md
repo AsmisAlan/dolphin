@@ -20,3 +20,7 @@ Video generation from template
 - email reading creation
 - Curriculum mapper to convert a CV into another type of data
 - kavak: extract information from web about cars
+
+# An example of something that I want to do
+
+https://llamalab.com/automate/
