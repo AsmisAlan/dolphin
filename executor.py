@@ -42,7 +42,7 @@ json_string = """
                 "max_tokens": 40,
                 "temperature": 0.9,
                 "model": "gpt-3.5-turbo",
-                "api_key": "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",
+                "api_key": "YOUR-API-KEY",
                 "system_role": "Based on the given text create a better search query, use double quotes to search for an exact match in important words, use the language of the user to create the query"
             }
         },
@@ -68,7 +68,7 @@ json_string = """
                 "max_tokens": 3000,
                 "temperature": 0.2,
                 "model": "gpt-3.5-turbo",
-                "api_key": "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",
+                "api_key": "YOUR-API-KEY",
                 "system_role": "Create a post for medium with markdown format, ignore the links that are not relevant, use the language of the user to create the post"
             }
         }

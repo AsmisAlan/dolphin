@@ -1,6 +1,6 @@
 from llama_index import GPTSimpleVectorIndex, SimpleDirectoryReader
 import os
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "YOUR-API-KEY"
 
 text = """
     AI-Driven Development

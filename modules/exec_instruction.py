@@ -69,7 +69,7 @@ if __name__ == "__main__":
     result = exec_instruction(instruction={
         'feature': 'natural_language_openai_chat_gpt',
         'input': {'content': str(result)},
-        'configuration': {'max_tokens': 100, 'temperature': 0.9, 'model': 'gpt-3.5-turbo', 'api_key': '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', 'system_role': 'You are a python expert and you are going to make a summary of the given links'}
+        'configuration': {'max_tokens': 100, 'temperature': 0.9, 'model': 'gpt-3.5-turbo', 'api_key': 'YOUR-API-KEY', 'system_role': 'You are a python expert and you are going to make a summary of the given links'}
     })
 
     print(result)

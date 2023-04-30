@@ -73,7 +73,7 @@ def chat_gpt_prompt(configuration: ChatGPTConfiguration, input: ChatGPTInput) ->
 if __name__ == "__main__":
     content = "Hello world"
     result = chat_gpt_prompt({
-        "api_key": "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",
+        "api_key": "YOUR-API-KEY",
         "system_role": "Your role is to create a translation of the given text to spanish, dont repeat the work , just the translation",
         "model": "gpt-3.5-turbo",
         "temperature": 0,
